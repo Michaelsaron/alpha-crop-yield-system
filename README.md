@@ -41,8 +41,20 @@ streamlit run app/app.py
 ## Submission
 `submission/team_crop_champions_submission.csv` contains exactly 3,750 plot IDs in template order and numeric predictions.
 
-## Railway deployment
-This project is ready for Railway with `railway.toml`. Create a Railway project from the GitHub repository; Railway should use the start command:
+## Streamlit Community Cloud Deployment
+
+This project is deployed on Streamlit Community Cloud.
+
+**Live Application:**  
+https://alpha-crop-yield-system-u8xcqcmlsyerdkrth4hwzf.streamlit.app/
+
+The application is deployed directly from the GitHub repository using:
+
+- Branch: `main`
+- Main file: `app/app.py`
+- Python version: `3.12`
+
+Updates pushed to the GitHub repository are automatically reflected in the deployed application.
 
 ```bash
 streamlit run app/app.py --server.address 0.0.0.0 --server.port $PORT --server.headless true
@@ -58,3 +70,6 @@ python tests/final_project_test.py
 ```
 
 It checks required files, processed data, figures, model loading, submission validity, presentation slide count, Alpha Team roster and Python syntax. A Markdown report is written to `reports/automatic_test_report.md`.
+
+
+Our Crop Yield Prediction System is now deployed and accessible at: https://alpha-crop-yield-system-u8xcqcmlsyerdkrth4hwzf.streamlit.app/
