@@ -1,0 +1,17 @@
+file,columns,issue_type,rows_affected,percent,fix,why
+plot_train,region,inconsistent labels,2363,15.66,strip/case/alias standardization,reliable joins/categories
+plot_train,crop_type,inconsistent labels/tef alias,2982,19.76,strip/lower + tef->teff,reliable joins/categories
+plot_train,rainfall/fertilizer/soil,missing values,1752,11.61,leave NA for train-fitted model imputer,avoid leakage
+plot_train,pest_disease_flag/labor_days_per_ha,-999 sentinel,775,5.14,replace -999 with NA; impute in pipeline,-999 is not a real measurement
+plot_train,farm_size/fertilizer/distance,extreme values,127,0.84,"retain; tree models robust, inspect in analysis",avoid arbitrary deletion; test also contains extremes
+plot_test,region,inconsistent labels,554,14.77,strip/case/alias standardization,reliable joins/categories
+plot_test,crop_type,inconsistent labels/tef alias,755,20.13,strip/lower + tef->teff,reliable joins/categories
+plot_test,rainfall/fertilizer/soil,missing values,419,11.17,leave NA for train-fitted model imputer,avoid leakage
+plot_test,pest_disease_flag/labor_days_per_ha,-999 sentinel,179,4.77,replace -999 with NA; impute in pipeline,-999 is not a real measurement
+plot_test,farm_size/fertilizer/distance,extreme values,35,0.93,"retain; tree models robust, inspect in analysis",avoid arbitrary deletion; test also contains extremes
+weather,region,inconsistent/abbreviated labels,50,21.55,standardize aliases,join reliability
+weather,all columns,duplicate rows,1,0.43,drop exact duplicates,avoid double-counting months
+weather,avg_temp_c/monthly_rainfall_mm,missing values,3,1.29,region-month median then overall median,preserve weather coverage
+price,crop_type,inconsistent labels,22,22.0,strip/lower,join reliability
+price,price_birr_per_quintal,missing values,4,4.0,crop-year median then crop median,complete analysis/demo lookup
+price,price_birr_per_quintal,unit mix-up (<100),4,4.0,multiply suspicious <100 values by 100,values appear recorded in hundreds instead of birr

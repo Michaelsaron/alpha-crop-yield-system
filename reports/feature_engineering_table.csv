@@ -1,0 +1,8 @@
+feature,formula,source,why
+season_avg_temp_c,mean(avg_temp_c over 4 months),weather,captures thermal growing conditions
+season_rainfall_mm,sum(monthly_rainfall_mm over 4 months),weather,captures seasonal water supply
+season_extreme_heat_days,sum(extreme_heat_days over 4 months),weather,captures heat stress
+season_temp_deviation_c,season temp - region/year typical,weather,captures anomaly
+planting_month_num,Jan=1 ... Dec=12,planting_month,numeric timing signal
+fertilizer_seed_interaction,fertilizer × improved_seed,plot,management interaction
+rainfall_gap_mm,reported rainfall - station rainfall,plot + weather,measurement/local climate difference

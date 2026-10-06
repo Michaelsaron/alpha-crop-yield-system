@@ -1,0 +1,5 @@
+join,rows_before,rows_after,match_rate_pct,unmatched,incomplete_weather_windows
+train->weather,15090,15090,100.0,0,2925
+test->weather,3750,3750,100.0,0,748
+train->price,15090,15090,100.0,0,0
+test->price,3750,3750,100.0,0,0

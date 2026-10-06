@@ -1,0 +1,74 @@
+{
+  "features": [
+    "region",
+    "crop_type",
+    "survey_year",
+    "planting_month",
+    "altitude_m",
+    "rainfall_mm_season",
+    "farm_size_ha",
+    "fertilizer_kg_per_ha",
+    "improved_seed_used",
+    "pest_disease_flag",
+    "soil_quality_index",
+    "labor_days_per_ha",
+    "distance_to_market_km",
+    "season_avg_temp_c",
+    "season_rainfall_mm",
+    "season_extreme_heat_days",
+    "season_temp_deviation_c",
+    "planting_month_num",
+    "fertilizer_seed_interaction",
+    "rainfall_gap_mm"
+  ],
+  "categorical": [
+    "region",
+    "crop_type",
+    "planting_month"
+  ],
+  "numeric": [
+    "survey_year",
+    "altitude_m",
+    "rainfall_mm_season",
+    "farm_size_ha",
+    "fertilizer_kg_per_ha",
+    "improved_seed_used",
+    "pest_disease_flag",
+    "soil_quality_index",
+    "labor_days_per_ha",
+    "distance_to_market_km",
+    "season_avg_temp_c",
+    "season_rainfall_mm",
+    "season_extreme_heat_days",
+    "season_temp_deviation_c",
+    "planting_month_num",
+    "fertilizer_seed_interaction",
+    "rainfall_gap_mm"
+  ],
+  "best_params": {
+    "model__reg_lambda": 3,
+    "model__reg_alpha": 0.5,
+    "model__num_leaves": 47,
+    "model__n_estimators": 500,
+    "model__min_child_samples": 10,
+    "model__learning_rate": 0.035
+  },
+  "validation_metrics": {
+    "RMSE": 0.4593342835120742,
+    "MAE": 0.33557195062392964,
+    "R2": 0.894320382706167
+  },
+  "cv_rmse_mean": 0.46903071568490484,
+  "cv_rmse_std": 0.011377778263703885,
+  "out_of_time": {
+    "RMSE": 0.48449865264171155,
+    "MAE": 0.3518986883988993,
+    "R2": 0.8858826610517869
+  },
+  "weather_ablation_without": {
+    "RMSE": 0.4899148373334772,
+    "MAE": 0.35580780299619225,
+    "R2": 0.8797805617275539
+  },
+  "mean_yield": 2.762496745973244
+}

@@ -1,0 +1,25 @@
+column,dtype,source,description,derivation
+plot_id,object,plot survey,plot id,raw/cleaned
+region,string,plot survey,region,raw/cleaned
+crop_type,string,plot survey,crop type,raw/cleaned
+survey_year,int64,plot survey,survey year,raw/cleaned
+planting_month,object,plot survey,planting month,raw/cleaned
+altitude_m,float64,plot survey,altitude m,raw/cleaned
+rainfall_mm_season,float64,plot survey,rainfall mm season,raw/cleaned
+farm_size_ha,float64,plot survey,farm size ha,raw/cleaned
+fertilizer_kg_per_ha,float64,plot survey,fertilizer kg per ha,raw/cleaned
+improved_seed_used,int64,plot survey,improved seed used,raw/cleaned
+pest_disease_flag,float64,plot survey,pest disease flag,raw/cleaned
+soil_quality_index,float64,plot survey,soil quality index,raw/cleaned
+labor_days_per_ha,float64,plot survey,labor days per ha,raw/cleaned
+distance_to_market_km,float64,plot survey,distance to market km,raw/cleaned
+yield_tons_per_ha,float64,plot survey,Target: crop yield tons per hectare,raw/cleaned
+season_avg_temp_c,float64,engineered/weather,Mean temperature over planting month + next 3 months,derived
+season_rainfall_mm,float64,engineered/weather,Total station rainfall over planting month + next 3 months,derived
+season_extreme_heat_days,float64,engineered/weather,Sum of extreme heat days over growing window,derived
+weather_months_found,int64,engineered/weather,Number of weather months available in 4-month window,derived
+season_temp_deviation_c,float64,engineered/weather,Season temperature minus region-year typical season temperature,derived
+planting_month_num,int64,engineered/weather,Planting month encoded Jan=1...Dec=12,derived
+fertilizer_seed_interaction,float64,engineered plot interaction,fertilizer_kg_per_ha × improved_seed_used,derived
+rainfall_gap_mm,float64,engineered/weather,plot-reported rainfall minus station-derived season rainfall,derived
+price_birr_per_quintal,float64,market price (analysis/demo only),Cleaned market price; never used as model feature,derived

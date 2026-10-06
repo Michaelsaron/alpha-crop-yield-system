@@ -1,0 +1,1 @@
+Core logic is demonstrated step-by-step in the four notebooks. The final serialized sklearn Pipeline is in models/final_model.joblib.
