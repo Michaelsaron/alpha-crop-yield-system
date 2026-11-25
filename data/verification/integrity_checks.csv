@@ -1,0 +1,10 @@
+check,result,status
+train plot_id unique,True,PASS
+test plot_id unique,True,PASS
+train row count unchanged,True,PASS
+test row count unchanged,True,PASS
+allowed regions,True,PASS
+allowed crops,True,PASS
+yield nonnegative,True,PASS
+price positive,True,PASS
+train/test feature columns align,True,PASS

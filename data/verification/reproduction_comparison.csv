@@ -1,0 +1,5 @@
+file,old_shape,new_shape,same_columns,exact_values_match
+master_train,"(15090, 24)","(15090, 24)",True,False
+master_test,"(3750, 23)","(3750, 23)",True,False
+clean_weather,"(226, 6)","(226, 6)",True,False
+clean_prices,"(100, 4)","(100, 4)",True,False
